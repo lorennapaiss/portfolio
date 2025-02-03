@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #fff;;
 }
 
 .container {
@@ -47,6 +47,8 @@ header p {
     display: flex;
     align-items: center;
     gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .profile-img {
@@ -54,11 +56,17 @@ header p {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    border: 5px solid #ED9632;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 /* Seção Habilidades */
 #skills {
-    background: #f4f4f4;
+    background: #fff;
     padding: 40px 0;
 }
 
@@ -74,6 +82,12 @@ header p {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skill h3 {
@@ -99,6 +113,12 @@ header p {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project h3 {
@@ -114,15 +134,17 @@ header p {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
     background: #ED5432;
+    transform: scale(1.05);
 }
 
 /* Seção Contato */
 #contact {
-    background: #f4f4f4;
+    background: #fff;
     padding: 40px 0;
     text-align: center;
 }
@@ -139,6 +161,11 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ED9632;
 }
 
 form button {
@@ -148,10 +175,12 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
     background: #555;
+    transform: scale(1.05);
 }
 
 /* Rodapé */
@@ -162,13 +191,20 @@ footer {
     padding: 20px 0;
 }
 
+.social-links {
+    margin-top: 10px;
+}
+
 .social-links a {
     color: #fff;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
+    color: #333;
     text-decoration: underline;
 }
 
@@ -256,6 +292,7 @@ footer {
 .back-btn:hover {
     background: #ED5432;
 }
+
 /* Estilo do cabeçalho e navegação */
 header {
     background: #ED9632;
@@ -305,11 +342,13 @@ nav ul li a {
     padding: 10px;
     display: block;
     text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
     background: #ED9632;
     border-radius: 5px;
+    transform: scale(1.05);
 }
 
 /* Quando a tela for pequena, a navegação vira um menu em coluna */
